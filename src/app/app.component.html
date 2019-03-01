@@ -1,0 +1,24 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div *ngFor="let order of orders">
+<div>
+  Order placed
+  {{order.date}}
+</div>
+<div>
+  total
+  {{order.total}}
+</div>
+<div>
+  shipto
+  {{order.shipto}}
+</div>
+<div>
+  ordername
+  {{order.name}}
+</div>
+<div>
+  <button (click)="returnProduct()">return</button>
+  <button>track</button>
+</div>
+</div>
+<router-outlet></router-outlet>
