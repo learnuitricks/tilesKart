@@ -1,6 +1,10 @@
-# TilesKart22
+# TilesKart
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.5.
+
+# Setting up Application 
+
+Clone the repository to local system and run `npm install` command from folder to where repository is cloned. Ensure that we have package.json where we are running this command
 
 ## Development server
 
