@@ -1,50 +1,52 @@
-    
-
 
 <div class="container">
-    <h3>Tiles Cart</h3>
-    <hr>
-    <div class="row">
-        <div class="panel panel-primary filterable">
-            <div class="panel-heading">
-                <div class="container-fluid bg-light ">
-                    <div class="row align-items-center justify-content-center">
-                                        <div class="col-md-3 pt-3">
-                                            <div class="form-group">
-                                              <select id="inputState" class="form-control">
-                                                <option selected>Type</option>
-                                                <option>Model</option>
-                                                <option>Price</option>
-                                                <option>Status</option>
-                                              </select>
-                                            </div>
-                                        </div>
-                                           <div class="col-md-9 pt-3">
-                                            <div class="input-group">
-                                                <input type="text" class="form-control" placeholder="Search" name="search">
-                                                <div class="input-group-btn">
-                                                  <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+    <div class="panel panel-primary">
+        <div class="panel-heading">Tiles</div>
+        <div class="panel-body">
+            <table class="table">
+                <thead>
+                        <section class="search-sec">
+                                <div class="container-fluid">
+                                    <form action="#" method="post" novalidate="novalidate">
+                                        <div class="row pull-right">
+                                            <div class="col-lg-12">
+                                                <div class="row">
+                                                        <div class="col-lg-3 col-md-3 col-sm-12 p-0 pull-right">
+                                                        <button type="button" class="btn btn-primary wrn-btn" (click)='filterTiles()'>Search</button>
+                                                        </div>
+                                                    <div class="col-lg-3 col-md-3 col-sm-12 p-0 pull-right">
+                                                        <input type="text" class="form-control search-slt" [(ngModel)]='filterText'>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-sm-12 p-0 pull-right">
+                                                        <select [(ngModel)]='selectedFilter' class="form-control search-slt" name='selectBox' id="filter" >
+                                                            <option *ngFor='let filterOption of filterOptions' value='{{filterOption}}'>
+                                                          {{filterOption}}
+                                                            </option>
+                                                       </select>
+                                                    </div>     
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                               </div>
-            </div>
+                                    </form>
+                                </div>
+                        </section>
+                </thead>
+        </table>
             <table *ngIf="tiles && tiles.length>0" class="table">
-              <thead>
-                <tr>
-                <th>Image</th>
-                  <th> name</th>
-                  <th> model</th>
-                  <th> price</th>
-                  <th>Stock Status</th>
-                  <th>Rating</th>
+                <thead>
+                  <tr>
+                  <th>Image</th>
+                    <th> name</th>
+                    <th> model</th>
+                    <th> price</th>
+                    <th>Stock Status</th>
+                  </tr>
+                </thead>
+                <tr *ngFor="let tile of filteredTiles" app-tile [xtile]="tile">
                 </tr>
-              </thead>
-              <tr *ngFor="let tile of filteredTiles" app-tile [xtile]="tile">
-                
-              </tr>
-            </table>
+              </table>
+        
         </div>
-    </div>
+      </div>
+  
 </div>

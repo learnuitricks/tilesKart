@@ -1,19 +1,30 @@
-<div class="container-fluid">
-<div class="form-group">
-  <label for="email">Email address:</label>
-  <input type="email" class="form-control" id="email" [(ngModel)]="userName">
+<div class="container-fluid pras">
+  <div class="panel panel-primary">
+    <div class="panel-heading">Login</div>
+    <div class="panel-body">
+      <div style="margin:0%"> 
+      <div class="form-group row">
+        <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
+        <div class="col-md-6">
+            <input type="email" id="email_address" class="form-control"  id="email" [(ngModel)]="userName">
+            <div class="alert alert-danger" *ngIf="showErrorMessage">
+              user name is required
+            </div>
+        </div>
+    </div>
 
-  <div class="alert alert-danger" *ngIf="showErrorMessage">
-    user name is required
+    <div class="form-group row">
+        <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
+        <div class="col-md-6">
+          <input type="password" class="form-control" id="pwd" [(ngModel)]="passWord">
+        </div>
+    </div>
   </div>
- 
+    <div class="col-md-6 offset-md-4 ">
+      <button class="btn btn-primary " (click)="validateLogin()" >Login</button>
+      <!-- <button style='margin-right: 14px;'class="btn btn-primary pull-right" (click)="validateLogin()">Register</button> -->
+  </div>
 </div>
-<div class="form-group">
-  <label for="pwd">Password:</label>
-  <input type="password" class="form-control" id="pwd" [(ngModel)]="passWord">
 </div>
-<button class="btn btn-primary" (click)="validateLogin()" >Login</button>
-</div>
-
 
 
