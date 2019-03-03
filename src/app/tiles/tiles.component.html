@@ -1,7 +1,7 @@
 
-<div class="container">
-    <div class="panel panel-primary">
-        <div class="panel-heading">Tiles</div>
+<div class="container ">
+    <div class="panel panel-primary" style="width:100%;overflow:auto;">
+        <div class="panel-heading ">Tiles</div>
         <div class="panel-body">
             <table class="table">
                 <thead>
@@ -40,13 +40,12 @@
                     <th> model</th>
                     <th> price</th>
                     <th>Stock Status</th>
-                  </tr>
+                    <th>Rating</th>
+                </tr>
                 </thead>
                 <tr *ngFor="let tile of filteredTiles" app-tile [xtile]="tile">
                 </tr>
               </table>
-        
         </div>
       </div>
-  
 </div>
