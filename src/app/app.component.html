@@ -1,24 +1,17 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div *ngFor="let order of orders">
+
 <div>
-  Order placed
-  {{order.date}}
-</div>
-<div>
-  total
-  {{order.total}}
-</div>
-<div>
-  shipto
-  {{order.shipto}}
-</div>
-<div>
-  ordername
-  {{order.name}}
-</div>
-<div>
-  <button (click)="returnProduct()">return</button>
-  <button>track</button>
-</div>
-</div>
-<router-outlet></router-outlet>
+  <nav class='navbar navbar-default'>
+    <div class='container-fluid'>
+      <a class='navbar-brand'>{{pageTitle}}</a>
+      <ul class='nav navbar-nav'>
+        <li><a [routerLink]="['/tiles']">Tile List</a></li>
+      </ul>
+      <ul class='nav navbar-nav navbar-right'>
+        <li><a [routerLink]="['/login']">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class='container'>
+    <router-outlet></router-outlet>
+  </div>
+ </div>

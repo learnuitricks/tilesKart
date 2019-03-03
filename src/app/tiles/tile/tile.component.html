@@ -4,3 +4,5 @@
 <td> {{xtile.model}}</td>
  <td> {{xtile.price | currency:'INR'}}</td>
  <td> {{xtile.status |status}}</td>
+ <!-- <td>{{xtile.rating}}</td> -->
+ <td><app-star [rating]="xtile.rating" ></app-star></td>
