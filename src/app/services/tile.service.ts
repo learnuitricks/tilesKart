@@ -19,13 +19,13 @@ export class TileService {
     //return this.tiles;
   }
 
-  getFilteredTiles(filterOption,filterText):Array<ITile>{
+  getFilteredTiles(filterOption,filterText,tiles:Array<ITile>):Array<ITile>{
 
     var fTiles:Array<ITile>;
 
-    fTiles =  this.tiles.filter(function(tile){
+    fTiles =  tiles.filter(function(tile){
         if(filterOption=="name"){
-          if(tile.name.indexOf(filterText)>=0){
+          if(tile.name.toLocaleUpperCase().indexOf(filterText.toLocaleUpperCase())>=0){
             return true;
           }
           else{

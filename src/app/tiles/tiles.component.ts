@@ -32,7 +32,7 @@ export class TilesComponent implements OnInit {
 
 
    filterTiles(){
-     this.filteredTiles = this.tileService.getFilteredTiles(this.selectedFilter,this.filterText);
+     this.filteredTiles = this.tileService.getFilteredTiles(this.selectedFilter,this.filterText,this.tiles);
    }
 
    
