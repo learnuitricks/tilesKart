@@ -1,16 +1,41 @@
-<div>
-  <nav class='navbar navbar-default'>
-    <div class='container-fluid' >
-      <a class='navbar-brand'>{{pageTitle}}</a>
-      <ul class='nav navbar-nav pull-right'>
-        <li><a [routerLink]="['/tiles']">Tile List</a></li>
-      </ul>
-      <ul class='nav navbar-nav navbar-right'>
-        <li><a [routerLink]="['/login']">Login</a></li>
-      </ul>
+  <div>
+  <header>
+    <div class="pra">
+      <div class="dropdown pull-right">
+            <button class="dropbtn">Account</button>
+            <div class="dropdown-content">
+              <a href="#">Logout</a>
+            </div>
+      </div>
+      <ul class="nav navbar-nav pull-right ">
+          <li><a href="#" ><span class="glyphicon glyphicon-user"></span> Prashant</a></li>
+        </ul>
     </div>
-  </nav>
-  <div class='container'>
-    <router-outlet></router-outlet>
-  </div>
- </div>
+    <h2 class="logo" style="color:aqua;">    TilesKart</h2>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <nav>
+        <ul>
+        <hr>
+        <li><a [routerLink]="['/tiles']"> <i class="fa fa-briefcase"> Tile List</i></a></li>
+        <hr>
+        <li><a [routerLink]="['/login']"><i class="glyphicon glyphicon-log-in"></i> Login</a></li>
+      
+        <hr>
+        <li><a href="#"><i class="fa fa-certificate"></i> About</a></li>
+        <hr>
+        <li><a href="#"><i class="fa fa-home"></i> Blog</a></li>
+        <hr>
+        <li><a href="#"><i class="fa fa-arrow-up"></i> Contact</a></li>
+      <hr>  
+      </ul>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+        </label>
+        </header>
+      
+        <div class="content">
+            <router-outlet></router-outlet>
+        </div>
+      </div>
+          
