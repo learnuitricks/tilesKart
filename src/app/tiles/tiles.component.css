@@ -4,3 +4,7 @@
 .filterable .panel-heading .pull-right {
     margin-top: -20px;
 }
+.panel-primary {
+    border-color: #337ab7;
+    margin-top: 98px;
+}

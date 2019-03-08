@@ -12,12 +12,16 @@ import { LoginComponent } from './login/login.component';
 import { StatusPipe } from './pipes/status.pipe';
 import { TileComponent } from './tiles/tile/tile.component';
 import { StarComponent } from './star/star.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 const tileKartRoutes:Routes=[
+  {path:'welcome',component:WelcomeComponent},
   {path:'tiles',component:TilesComponent},
   {path:'login',component:LoginComponent},
-  {path:'', pathMatch:'prefix', redirectTo:'login'},
-  {path:'**', redirectTo:'login;'}
+  {path:'welcome',component:WelcomeComponent},
+  {path:'', pathMatch:'prefix', redirectTo:'welcome'},
+  {path:'**', redirectTo:'welcome;'},
+  
 ]
 
 
@@ -28,7 +32,8 @@ const tileKartRoutes:Routes=[
     LoginComponent,
     StatusPipe,
     TileComponent,
-    StarComponent
+    StarComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
